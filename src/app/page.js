@@ -23,11 +23,11 @@ export default function Home() {
     },
     {
       title: "スターを集めよう",
-      content: "サイト上に散りばめられた⭐️をできる限り早く集めてください。"
+      content: "サイト上に散りばめられた⭐️をできる限り早く集めてください。スターは全部で10個あります。"
     },
     {
-      title: "スターの数",
-      content: "スターは全部で10個あります。すべて見つけられるかな？"
+      title: "構築中のサイト",
+      content: "構築中のサイトのため、諸々動作が不安定かもしれません。"
     },
     
   ];
@@ -36,11 +36,11 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow">
         <section className="text-center p-10 bg-gradient-to-r from-blue-500 to-purple-500 text-white">
-          <h1 className="text-4xl font-bold mb-4">星を集めるゲーム</h1>
+          <h1 className="text-4xl font-bold mb-4">スターを10個集めてください</h1>
           <p className="mb-4">
             ああ、大変！私たちがWebサイトを構築中に、大切にしていた魔法のスターを10個も落としてしまいました...
             どこかに散らばってしまったこれらのスターをみつけ出して、救ってください！
-            スターはページの隅々に隠れているかもしれません。目を凝らして、できるだけ早く全てを集めましょう！
+            スターはページの隅々に隠れているかもしれません。目を凝らして、できるだけ早く全てを集めてください！
           </p>
           <button
             onClick={startGame}

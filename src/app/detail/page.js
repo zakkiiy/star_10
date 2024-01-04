@@ -1,7 +1,12 @@
+'use client'
+
 import React from 'react';
 import Star from '../components/Star';
+import Link from 'next/link';
+import { useStars } from '../context/StarContext';
 
 const Detail = () => {
+  const { status } = useStars();
   const otherPositions = [
     { top: '500px', left: '1300px' },
     // ...他のスターの位置
@@ -20,6 +25,22 @@ const Detail = () => {
     "毎晩、窓をノックする音がする。問題は、私が12階に住んでいることだ。"
   ];
 
+  if (status === 'authenticated') {
+    // ログインしていない場合
+    return (
+      <div className="min-h-screen flex justify-center items-center bg-gray-100">
+        <div className="max-w-md p-8 bg-white rounded-lg shadow-xl">
+          <h2 className="text-3xl font-bold mb-4 text-gray-800">アクセス制限</h2>
+          <p className="mb-6 text-gray-600">このページを表示するにはログアウトが必要です。</p>
+          <Link href="/auth">
+            <div className="inline-block bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-500 text-white font-bold py-2 px-4 rounded transition duration-300">
+              ログインページへ
+            </div>
+          </Link>
+        </div>
+      </div>
+    );
+  };
   return (
     <div className="min-h-screen bg-black text-white p-10">
       <h1 className="text-3xl font-bold mb-6">怖い話集</h1>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaRobot, FaRegHandshake, FaShieldAlt } from 'react-icons/fa';
+import { AiTwotoneStar } from "react-icons/ai";
 
 
 export default function Footer() {
@@ -17,7 +18,7 @@ export default function Footer() {
             <span className="mt-1">プライバシーポリシー</span>
           </Link>
           <Link href="/head/privacy_policy" className="flex flex-col items-center">
-            <FaRobot className="text-2xl text-indigo-400"/>
+            <AiTwotoneStar className="text-2xl text-indigo-400"/>
             <span className="mt-1">連絡先</span>
           </Link>
         </nav>

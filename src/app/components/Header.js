@@ -5,13 +5,20 @@ import Link from 'next/link';
 import { useStars } from '../context/StarContext';
 import { FaClock, FaStar,FaPlusCircle,FaUserCircle,FaSignOutAlt } from 'react-icons/fa';
 import { TbGhost2 } from "react-icons/tb";
+import { TbBrandDaysCounter } from "react-icons/tb";
+import { GiSelfLove } from "react-icons/gi";
+import { AiTwotoneStar } from "react-icons/ai";
 
 export default function Header() {
   const { time, collectedStars, status } = useStars();
 
   return (
     <header className="bg-gray-100 p-4 text-lg font-bold flex justify-between items-center">
-      <Link href="/"><div className="text-2xl">Star-10</div ></Link>
+      <Link href="/">
+        <div className="text-2xl">
+          <AiTwotoneStar className="inline ml-4 mr-2" />Star-10
+        </div>
+      </Link>
       <div>
         <FaClock className="inline mr-2" />時間: {time}秒
         <FaStar className="inline ml-4 mr-2" />集めた星: {collectedStars.size}
@@ -21,7 +28,7 @@ export default function Header() {
             <li>
               <Link href="/zange">
                 <div className="flex items-center text-black hover:text-blue-400">
-                  <TbGhost2 className="mr-2" />本日の懺悔
+                  <TbBrandDaysCounter className="mr-2" />本日の懺悔
                 </div>
               </Link>
             </li>
@@ -35,7 +42,7 @@ export default function Header() {
             <li>
               <Link href="/intro">
                 <div className="flex items-center text-black hover:text-blue-400">
-                  <FaPlusCircle className="mr-2" />自己紹介
+                  <GiSelfLove className="mr-2" />自己紹介
                 </div>
               </Link>
             </li>
