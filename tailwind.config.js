@@ -12,6 +12,9 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      animation: {
+        wiggle: 'wiggle 5s infinite', // 5秒間隔で無限にアニメーションを実行
+      }
     },
   },
   plugins: [],

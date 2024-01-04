@@ -19,6 +19,13 @@ export default function Header() {
       <nav>
           <ul className="flex space-x-6 items-center">
             <li>
+              <Link href="/zange">
+                <div className="flex items-center text-black hover:text-blue-400">
+                  <TbGhost2 className="mr-2" />本日の懺悔
+                </div>
+              </Link>
+            </li>
+            <li>
               <Link href="/horror/index">
                 <div className="flex items-center text-black hover:text-blue-400">
                   <TbGhost2 className="mr-2" />ホラーページ

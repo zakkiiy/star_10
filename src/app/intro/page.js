@@ -1,6 +1,20 @@
 import React from 'react';
+import Star from '../components/Star';
 
 const Intro = () => {
+
+  const otherPositions = [
+    { top: '700px', left: '1200px' },
+    { top: '600px', left: '1200px' },
+    { top: '500px', left: '1200px' },
+    { top: '400px', left: '1200px' },
+    { top: '300px', left: '1200px' },
+    { top: '200px', left: '1200px' },
+    { top: '100px', left: '1200px' },
+    { top: '300px', left: '1000px' },
+    // ...他のスターの位置
+  ];
+
   return (
     <div className="app">
       {/* ヘッダーセクション */}
@@ -31,6 +45,9 @@ const Intro = () => {
         <h2 className="text-3xl font-bold mb-3">パスワードヒント</h2>
         <p>ゲームのパスワードは「サイト名にするに限る」です。これがあなたの冒険への鍵となります。</p>
       </section>
+      {otherPositions.map((position, i) => (
+        <Star key={`other-page-star3${i+1}`} id={`other-page-star3${i+1}`} position={position} />
+      ))}
     </div>
   );
 }

@@ -17,22 +17,19 @@ export default function Home() {
   ];
 
   const sections = [
-    "このサイトは未完成です。",
-    "取得したスターは画面上から消えません。すみません。",
-    // ... 8番目まで同様にセクションの説明を追加
-    "「ゲームを開始」をクリックするとゲームが開始します。",
-    "スターの位置を固定化しようと思いましたが、諦めました。",
-    "準備中", 
-    "準備中",
-    "準備中",
-    "準備中",
-    "準備中",
-    "詳細ページ",
-    "最後のセクションです！詳細を知りたい方はこちら！", 
-    "最後のセクションです！詳細を知りたい方はこちら！", 
-    "最後のセクションです！詳細を知りたい方はこちら！", 
-    "最後のセクションです！詳細を知りたい方はこちら！", 
-    "最後のセクションです！詳細を知りたい方はこちら！", 
+    {
+      title: "ゲームを開始",
+      content: "「ゲームを開始」をクリックするとゲームが始まります。"
+    },
+    {
+      title: "スターを集めよう",
+      content: "サイト上に散りばめられた⭐️をできる限り早く集めてください。"
+    },
+    {
+      title: "スターの数",
+      content: "スターは全部で10個あります。すべて見つけられるかな？"
+    },
+    
   ];
 
   return (
@@ -40,29 +37,33 @@ export default function Home() {
       <main className="flex-grow">
         <section className="text-center p-10 bg-gradient-to-r from-blue-500 to-purple-500 text-white">
           <h1 className="text-4xl font-bold mb-4">星を集めるゲーム</h1>
-          <p className="mb-4">このゲームでは、星を集めて時間を競います。できるだけ早く全ての星を集めましょう！</p>
-          <button onClick={startGame} className="bg-blue-500 text-white p-2 mt-4">ゲームを開始</button>
+          <p className="mb-4">
+            ああ、大変！私たちがWebサイトを構築中に、大切にしていた魔法のスターを10個も落としてしまいました...
+            どこかに散らばってしまったこれらのスターをみつけ出して、救ってください！
+            スターはページの隅々に隠れているかもしれません。目を凝らして、できるだけ早く全てを集めましょう！
+          </p>
+          <button
+            onClick={startGame}
+            className="bg-red-600 hover:bg-red-900 text-white font-bold py-4 px-8 mt-4 rounded shadow-lg transform hover:-translate-y-1 transition-all duration-300 ease-in-out focus:outline-none focus:shadow-outline"
+          >
+            ゲームを開始
+          </button>
         </section>
-        {otherPositions.map((position, i) => (
-        <Star key={`other-page-star${i+1}`} id={`other-page-star${i+1}`} position={position} />
-        ))}
-        {/* 10個のセクションを横並びに配置 */}
-        <div className="flex flex-wrap mx-4 my-10">
-          {sections.map((content, i) => (
+
+        <div className="flex justify-around mx-4 my-10">
+          {sections.map((section, i) => (
             <div key={i} className="w-full md:w-1/3 p-4">
-              <div className="bg-white p-6 rounded shadow">
-                <h2 className="text-2xl font-bold mb-3">セクション{i + 1}</h2>
-                {i === 9 ? ( // 10個目のセクションの場合、リンクを表示
-                  <Link href="/additional-info">
-                    <div className="text-blue-500 hover:text-blue-700">{content}</div>
-                  </Link>
-                ) : (
-                  <p>{content}</p> // それ以外の場合、通常のテキストを表示
-                )}
+              <div className="bg-white p-6 rounded shadow text-center">
+                <h2 className="text-2xl font-bold mb-3">{section.title}</h2>
+                <p>{section.content}</p>
               </div>
             </div>
           ))}
         </div>
+
+        {otherPositions.map((position, i) => (
+          <Star key={`other-page-star${i+1}`} id={`other-page-star${i+1}`} position={position} />
+        ))}
       </main>
     </div>
   );
