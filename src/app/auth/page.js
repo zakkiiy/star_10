@@ -8,6 +8,7 @@ const Auth = () => {
   const { status, attemptLogin, setStatus } = useStars();
   const [password, setPassword] = useState('');
   const [dummyPassword, setDummyPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');  // エラーメッセージの状態
 
   const otherPositions = [
     { top: '1300px', left: '700px' },
@@ -15,7 +16,13 @@ const Auth = () => {
   ];
 
   const handleLogin = () => {
-    attemptLogin(password);
+    if (password === "Star-10") {
+      attemptLogin(password);
+      setErrorMessage(''); // ログイン成功時はエラーメッセージをクリア
+    } else {
+      setErrorMessage('パスワードが間違っています。'); // エラーメッセージを設定
+      setPassword(''); // パスワード入力をクリア
+    }
   };
 
   const handleLogout = () => {
@@ -72,6 +79,7 @@ const Auth = () => {
         </>
       ) : (
         <>
+          {errorMessage && <p className="text-red-600">{errorMessage}</p>} {/* エラーメッセージを表示 */}
           <input 
             type="password" 
             placeholder="パスワードを入力"

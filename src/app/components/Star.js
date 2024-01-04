@@ -4,13 +4,22 @@ import React from 'react';
 import { useStars } from '../context/StarContext';
 
 const Star = ({ id, position }) => {
-  const { collectStar } = useStars();
+  const { collectedStars, collectStar } = useStars();
+
+  // スターが集められたかどうかを確認
+  const isCollected = collectedStars.has(id);
+
+  const handleClick = () => {
+    if (!isCollected) {
+      collectStar(id);  // まだ集められていなければ、スターを集める
+    }
+  };
 
   return (
     <button
-      onClick={() => collectStar(id)}
-      className="star cursor-pointer text-yellow-300" // Tailwindのクラスを使用
-      style={{ position: 'absolute', ...position }} // 絶対位置指定とカスタム位置
+      onClick={handleClick}
+      className={`star cursor-pointer text-yellow-300 ${isCollected ? 'hidden' : ''}`} // スターが集められた場合は非表示に
+      style={{ position: 'absolute', ...position }}
     >
       ⭐️
     </button>
@@ -18,4 +27,3 @@ const Star = ({ id, position }) => {
 };
 
 export default Star;
-

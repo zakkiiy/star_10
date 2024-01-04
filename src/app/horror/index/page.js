@@ -9,6 +9,10 @@ import { FaGhost } from 'react-icons/fa'; // ホラーアイコン
 const HorrorPage = () => {
   const { status } = useStars();
 
+  const handleTansaku = () => {
+    alert('準備中です😅');
+  };
+
   if (status !== 'authenticated') {
     // ログインしていない場合、メッセージを表示
     return (
@@ -44,7 +48,7 @@ const HorrorPage = () => {
         
         {/* ボタン */}
         <div className="mt-10 text-center">
-          <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+          <button onClick={handleTansaku} className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
             さらに深く探索する
           </button>
         </div>
