@@ -13,7 +13,7 @@ export default function Home() {
 
   const otherPositions = [
     { top: '150px', left: '250px' },
-    // ...他のスターの位置
+    { top: '900px', left: '250px' },
   ];
 
   const sections = [

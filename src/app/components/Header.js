@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useStars } from '../context/StarContext';
-import { FaUser, FaHome, FaClock, FaStar,FaListAlt,FaPlusCircle,FaUserCircle,FaSignOutAlt } from 'react-icons/fa';
+import { FaClock, FaStar,FaPlusCircle,FaUserCircle,FaSignOutAlt } from 'react-icons/fa';
 import { TbGhost2 } from "react-icons/tb";
 
 export default function Header() {
@@ -36,6 +36,13 @@ export default function Header() {
               <Link href="/intro">
                 <div className="flex items-center text-black hover:text-blue-400">
                   <FaPlusCircle className="mr-2" />自己紹介
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link href="../settings">
+                <div className="flex items-center text-black hover:text-blue-400">
+                  <FaPlusCircle className="mr-2" />設定
                 </div>
               </Link>
             </li>

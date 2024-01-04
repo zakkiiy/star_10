@@ -22,7 +22,7 @@ export default function Footer() {
           </Link>
         </nav>
         <div className="text-sm">
-          <p>&copy; {new Date().getFullYear()} Star-10. All rights reserved.</p>
+          <p>&copy; 1995 Star-10. All rights reserved.</p>
           <Link href="/head/virtualreality" className="flex flex-col items-center">
             <FaRobot className="text-2xl text-indigo-400"/>
             <span className="mt-1">仮想現実</span>
@@ -32,5 +32,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-//

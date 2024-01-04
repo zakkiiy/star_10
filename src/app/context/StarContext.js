@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import Modal from '../components/Modal'
+import Confetti from 'react-confetti';
 
 const StarContext = createContext({
   collectedStars: new Set(),
@@ -25,6 +26,7 @@ export const StarProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [status, setStatus] = useState('');
   const [showModal, setShowModal] = useState(false); 
+  const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
     let interval;
@@ -44,7 +46,8 @@ export const StarProvider = ({ children }) => {
       setCollectedStars(newSet);
       if (newSet.size >= 10) {
         setIsGameActive(false);
-        setShowModal(true);  // 10個のスターを集めたらモーダルを表示
+        setShowModal(true);
+        setShowConfetti(true);
       }
     }
   };
@@ -67,9 +70,10 @@ export const StarProvider = ({ children }) => {
   };
 
   return (
-    <StarContext.Provider value={{ collectedStars, collectStar, time, setTime, isGameActive, setIsGameActive, isLoggedIn, attemptLogin, status, setStatus, showModal, setShowModal, resetGame }}>
+    <StarContext.Provider value={{ collectedStars, collectStar, time, setTime, isGameActive, setIsGameActive, isLoggedIn, attemptLogin, status, setStatus, showModal, setShowModal, resetGame, showConfetti, setShowConfetti  }}>
       {children}
-      {showModal && <Modal />} 
+      {showModal && <Modal />}
+      {showConfetti && <Confetti />}
     </StarContext.Provider>
   );
 };

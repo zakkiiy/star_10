@@ -74,7 +74,7 @@ const Auth = () => {
           <p>ログインに成功しました。</p>
           <button onClick={handleLogoutX} className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4">ログアウト</button>
           {otherPositions.map((position, i) => (
-            <Star key={`other-page-star4${i+1}`} id={`other-page-star4${i+1}`} position={position} />
+            <Star key={`other-page-star2${i+1}`} id={`other-page-star2${i+1}`} position={position} />
           ))}
         </>
       ) : (
