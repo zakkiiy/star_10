@@ -50,7 +50,7 @@ export const StarProvider = ({ children }) => {
   };
   
   const attemptLogin = (password) => {
-    if (password === "a") {
+    if (password === "Star-10") {
       setIsLoggedIn(true);
       setStatus('authenticated');
     } else {

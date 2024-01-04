@@ -6,12 +6,12 @@ const Modal = () => {
   const { time, setShowModal, resetGame } = useStars();
 
   const handleClose = () => {
-    setShowModal(false);  // モーダルを閉じる
+    setShowModal(false);
   };
 
   const handleRestart = () => {
-    resetGame();  // ゲームをリセット
-    setShowModal(false);  // モーダルを閉じる
+    resetGame();
+    setShowModal(false);
   };
 
   return (
