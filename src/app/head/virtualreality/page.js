@@ -40,8 +40,8 @@ const VirtualReality = () => {
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center">
       <div className="text-center p-10">
-        <h1 className="text-5xl font-bold mb-5">おまけ</h1>
-        <p className="mb-5">あああああ</p>
+        <h1 className="text-5xl font-bold mb-5">てすと</h1>
+        <p className="mb-5">てすと</p>
         <div className="animate-wiggle inline-block bg-purple-600 p-5 rounded transform duration-300 hover:scale-110">
           テストテストテストテストテストテストテスト
         </div>
