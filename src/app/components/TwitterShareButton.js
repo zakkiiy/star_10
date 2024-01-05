@@ -2,7 +2,7 @@ import React from 'react';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 const TwitterShareButton = ({ time }) => {
-  const tweetText =`おめでとうございます！ ${time} 秒で10個のスター全てを集めました。\nアプリ名：Star-10\nURL:https://star-10.vercel.app/`
+  const tweetText =`おめでとうございます！ ${time} 秒で10個のスター全てを集めました。\nアプリ名：Star-10\nURL：https://star-10.vercel.app/`
   const pageUrl ="https://star-10.vercel.app/";
 
   return (
