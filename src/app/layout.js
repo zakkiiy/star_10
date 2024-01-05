@@ -9,14 +9,14 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   metadataBase: new URL('https://star-10.vercel.app//'), //本番環境のアプリ名
   title: 'star-10',
-  description: 'なるはやでスター10個の獲得を目指すアプリ',
+  description: 'なるはやでスター10個の獲得を目指すアプリ。スタートとスター10をかけました。',
   openGraph: {
 		title: 'star-10',
-    description: 'なるはやでスター10個の獲得を目指すアプリ',
+    description: 'なるはやでスター10個の獲得を目指すアプリ。スタートとスター10をかけました。',
 	},
 	twitter: {
 		title: 'star-10',
-    description: 'なるはやでスター10個の獲得を目指すアプリ',
+    description: 'なるはやでスター10個の獲得を目指すアプリ。スタートとスター10をかけました。',
 		card: 'summary_large_image',
 	},
 }

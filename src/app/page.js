@@ -22,7 +22,7 @@ export default function Home() {
     },
     {
       title: "スターを集めよう",
-      content: "サイト上に散りばめられた⭐️をできる限り早く集めてください。スターは全部で10個あります。"
+      content: "サイト上に散りばめられた⭐️をできる限り早く集めてください。"
     },
     {
       title: "構築中のサイト",
@@ -35,15 +35,18 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow">
         <section className="text-center p-10 bg-gradient-to-r from-blue-500 to-purple-500 text-white">
-          <h1 className="text-4xl font-bold mb-4">スターを10個集めてください</h1>
+          <h1 className="text-4xl font-bold mb-4">Star-10</h1>
+          <h2 className="text-2xl font-bold mb-4">サイト上に散りばめられたスター10個を集めてください</h2>
           <p className="mb-4">
             ああ、大変！私たちがWebサイトを構築中に、大切にしていた魔法のスターを10個も落としてしまいました...
             どこかに散らばってしまったこれらのスターをみつけ出して、救ってください！
-            スターはページの隅々に隠れているかもしれません。目を凝らして、できるだけ早く全てを集めてください！
+          </p>
+          <p className="mb-4">
+            スターはページの隅々に隠れているかもしれません。目を凝らして、できるだけ早く全てのスターを集めてください！
           </p>
           <button
             onClick={startGame}
-            className="bg-red-600 hover:bg-red-900 text-white font-bold py-4 px-8 mt-4 rounded shadow-lg transform hover:-translate-y-1 transition-all duration-300 ease-in-out focus:outline-none focus:shadow-outline"
+            className="bg-red-500 hover:bg-red-600 text-white font-bold py-12 px-24 text-xl mt-6 rounded shadow-lg transform hover:-translate-y-1 transition-all duration-300 ease-in-out focus:outline-none focus:shadow-outline"
           >
             ゲームを開始
           </button>
