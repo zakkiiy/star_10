@@ -26,7 +26,7 @@ export default function Footer() {
           <p>&copy; 1995 Star-10. All rights reserved.</p>
           <Link href="/head/virtualreality" className="flex flex-col items-center">
             <FaRobot className="text-2xl text-indigo-400"/>
-            <span className="mt-1">仮想現実</span>
+            <span className="mt-1">おまけ</span>
           </Link>
         </div>
       </div>

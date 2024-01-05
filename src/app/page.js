@@ -13,7 +13,6 @@ export default function Home() {
 
   const otherPositions = [
     { top: '150px', left: '250px' },
-    { top: '900px', left: '250px' },
   ];
 
   const sections = [

@@ -28,7 +28,7 @@ export default function Header() {
             <li>
               <Link href="/zange">
                 <div className="flex items-center text-black hover:text-blue-400">
-                  <TbBrandDaysCounter className="mr-2" />本日の懺悔
+                  <TbBrandDaysCounter className="mr-2" />本日の投稿
                 </div>
               </Link>
             </li>

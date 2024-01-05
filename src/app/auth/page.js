@@ -11,7 +11,7 @@ const Auth = () => {
   const [errorMessage, setErrorMessage] = useState('');  // エラーメッセージの状態
 
   const otherPositions = [
-    { top: '1300px', left: '700px' },
+    { top: '500px', left: '700px' },
     // ...他のスターの位置
   ];
 
@@ -20,8 +20,9 @@ const Auth = () => {
       attemptLogin(password);
       setErrorMessage(''); // ログイン成功時はエラーメッセージをクリア
     } else {
-      setErrorMessage('パスワードが間違っています。'); // エラーメッセージを設定
+      setErrorMessage('パスワードが間違っています。あと３回間違えると使えなくなります。'); // エラーメッセージを設定
       setPassword(''); // パスワード入力をクリア
+
     }
   };
 
@@ -80,6 +81,11 @@ const Auth = () => {
       ) : (
         <>
           {errorMessage && <p className="text-red-600">{errorMessage}</p>} {/* エラーメッセージを表示 */}
+          {errorMessage && (  // エラーメッセージがある場合、スターを表示
+            otherPositions.map((position, i) => (
+              <Star key={`other-page-star15${i+1}`} id={`other-page-star15${i+1}`} position={position} />
+            ))
+          )}
           <input 
             type="password" 
             placeholder="パスワードを入力"
