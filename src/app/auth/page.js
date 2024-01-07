@@ -11,7 +11,7 @@ const Auth = () => {
   const [errorMessage, setErrorMessage] = useState('');  // エラーメッセージの状態
 
   const otherPositions = [
-    { top: '500px', left: '700px' },
+    { top: '50%', left: '70%' },
     // ...他のスターの位置
   ];
 

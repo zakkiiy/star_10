@@ -9,7 +9,7 @@ const Settings = () => {
   const { status } = useStars();
   const [showModal, setShowModal] = useState(false);
   const otherPositions = [
-    { top: '900px', left: '1300px' },
+    { top: '60%', left: '70%' },
     // ...他のスターの位置
   ];
 

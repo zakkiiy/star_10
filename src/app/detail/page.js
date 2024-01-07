@@ -11,7 +11,7 @@ const Detail = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 10;
   const otherPositions = [
-    { top: '500px', left: '1300px' },
+    { top: '52%', left: '70%' },
     // ...他のスターの位置
   ];
 

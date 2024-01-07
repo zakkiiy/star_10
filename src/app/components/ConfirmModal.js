@@ -5,7 +5,7 @@ import Star from './Star';
 
 const ConfirmModal = ({ onClose }) => {
   const otherPositions = [
-    { top: '700px', left: '1300px' },
+    { top: '80%', left: '80%' },
     // ...他のスターの位置
   ];
 

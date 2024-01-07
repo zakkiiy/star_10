@@ -4,7 +4,7 @@ import Star from '../components/Star';
 const Intro = () => {
 
   const otherPositions = [
-    { top: '700px', left: '1200px' },
+    { top: '70%', left: '70%' },
     // ...他のスターの位置
   ];
 

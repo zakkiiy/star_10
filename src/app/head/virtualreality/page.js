@@ -10,7 +10,7 @@ import Star from '../../components/Star';
 const VirtualReality = () => {
   const { status } = useStars();
   const otherPositions = [
-    { top: '700px', left: '200px' },
+    { top: '70%', left: '12%' },
     // ...他のスターの位置
   ];
 

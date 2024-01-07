@@ -3,7 +3,7 @@ import Star from '../../components/Star';
 
 const Contact = () => {
   const otherPositions = [
-    { top: '500px', left: '1300px' },
+    { top: '50%', left: '75%' },
     // ...他のスターの位置
   ];
   return (

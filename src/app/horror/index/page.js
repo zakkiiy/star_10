@@ -11,7 +11,7 @@ const HorrorPage = () => {
   const { status } = useStars();
 
   const otherPositions = [
-    { top: '900px', left: '1300px' },
+    { top: '80%', left: '80%' },
     // ...他のスターの位置
   ];
 

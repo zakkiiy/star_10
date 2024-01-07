@@ -12,7 +12,7 @@ export default function Home() {
   };
 
   const otherPositions = [
-    { top: '150px', left: '250px' },
+    { top: '15%', left: '25%' },
   ];
 
   const sections = [
